@@ -8,5 +8,12 @@ button {
   border: none;
   outline: none;
   height: 50px;
+  font-size: 1.2rem;
   cursor: pointer;
+  font-weight: 700;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  background-color: rgba(107, 61, 150, 0.5);
 }

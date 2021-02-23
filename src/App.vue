@@ -1,36 +1,34 @@
 <template>
   <h1>Hello Vue :)</h1>
-  <teleport v-if="showModal" to=".modals">
-    <Modal :header="header" :text="text" @close="toggleModal" :theme="theme">
-      <h1>Trying slot</h1>
-      <p>pure slot</p>
-      <template v-slot:links>
-        <button class="btn-action">Agree</button>
-        <button class="btn-action" @click="toggleModal">Cancel</button>
-      </template>
-    </Modal>
-  </teleport>
-  <button class="btn-toggle" @click="toggleModal">Show modal</button>
+  <button class="btn-play" :disabled="isPlaying" @click="play">Play</button>
+  <Result :score="score" v-if="score !== 0" />
+  <Block v-if="isPlaying" :delay="delay" @end="stop" />
 </template>
 
 <script>
-import Modal from "./components/Modal";
+import Block from "./components/Block";
+import Result from "./components/Result";
+
 export default {
   name: "App",
-  components: {
-    Modal,
-  },
+  components: { Block, Result },
   data() {
     return {
-      theme: "dark",
-      header: "This is modal header",
-      text: "This is modal text",
-      showModal: false,
+      delay: null,
+      isPlaying: false,
+      score: 0,
     };
   },
   methods: {
-    toggleModal() {
-      this.showModal = !this.showModal;
+    play() {
+      this.score = 0;
+      this.isPlaying = true;
+      this.delay = 2000 + Math.random() * 5000;
+    },
+    stop(reactionTime) {
+      this.score = reactionTime;
+      this.isPlaying = false;
+      console.log("score : ", this.score);
     },
   },
 };
@@ -50,8 +48,8 @@ export default {
   background-color: bisque;
   width: 100px;
 }
-.btn-action {
-  background-color: darkcyan;
+.btn-play {
+  background-color: rgb(94, 25, 184);
   width: 100px;
   color: #fff;
   margin: 0 10px;
