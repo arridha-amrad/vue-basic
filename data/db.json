@@ -1,4 +1,24 @@
 {
+  "posts": [
+    {
+      "id": 1,
+      "title": "Post 1",
+      "body": "Donec viverra metus orci, ac convallis odio imperdiet id. Pellentesque lobortis fringilla lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam maximus efficitur rutrum. Nam orci turpis, dictum quis quam et, viverra dignissim elit. In feugiat tortor vel accumsan vestibulum.",
+      "tags": ["webdev", "coding", "news"]
+    },
+    {
+      "id": 2,
+      "title": "Post 2",
+      "body": "Etiam pellentesque fermentum ex sed hendrerit. Maecenas egestas turpis sit amet lorem rutrum mollis. Morbi pretium fringilla odio id lobortis. Sed eu est ex. Integer aliquet urna ac egestas scelerisque. Praesent varius libero quis ultrices varius. Etiam faucibus nibh et diam placerat, at hendrerit leo fermentum. Sed a commodo erat.",
+      "tags": ["webdev", "coding", "news"]
+    },
+    {
+      "id": 3,
+      "title": "Post 3",
+      "body": "Curabitur eu eros vitae mi ultricies consequat. Pellentesque blandit sollicitudin tortor et pellentesque. Quisque convallis maximus felis, faucibus porttitor enim gravida at. Ut gravida felis nulla, vitae luctus diam ullamcorper et. Cras lacinia, leo vel congue maximus, orci ligula congue sem, eget commodo enim velit at odio. Praesent vitae lorem orci. Ut eu suscipit sem.",
+      "tags": ["webdev", "coding", "news"]
+    }
+  ],
   "jobs": [
     {
       "id": 1,

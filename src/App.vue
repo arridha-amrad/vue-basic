@@ -3,10 +3,11 @@
     <router-link class="link" to="/">Home</router-link>
     <router-link class="link" to="/about">About</router-link>
     <router-link class="link" to="/jobs">Jobs</router-link>
+    <router-link class="link" to="/posts">Post</router-link>
   </div>
-  <button class="nav-btn" @click="back">Back</button>
+  <!-- <button class="nav-btn" @click="back">Back</button>
   <button class="nav-btn" @click="redirect">Redirect</button>
-  <button class="nav-btn" @click="forward">Forward</button>
+  <button class="nav-btn" @click="forward">Forward</button> -->
   <router-view />
 </template>
 

@@ -4,8 +4,21 @@ import About from "../views/About.vue";
 import Jobs from "../views/jobs/Jobs.vue";
 import JobDetail from "../views/jobs/JobDetail.vue";
 import NotFound from "../views/NotFound.vue";
+import Posts from "../views/posts/Posts.vue";
+import PostDetail from "../views/posts/PostDetail.vue";
 
 const routes = [
+  {
+    path: "/posts",
+    name: "Posts",
+    component: Posts,
+  },
+  {
+    path: "/post/:id",
+    name: "PostDetail",
+    component: PostDetail,
+    props: true,
+  },
   {
     path: "/",
     name: "Home",
